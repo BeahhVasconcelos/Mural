@@ -1,0 +1,427 @@
+:root {
+  --hamburguer-color: #0052fe;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+header .right {
+  display: none;
+}
+
+header ul {
+  padding: 0;
+  list-style-type: none;
+
+  display: flex;
+}
+
+header li {
+  color: #0052fe;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+nav ul {
+  padding: 0px;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding: 15px;
+}
+
+nav ul li a {
+  color: palevioletred;
+  text-decoration: none;
+}
+
+.modal {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #001033;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  transition: opacity 0.15s;
+}
+
+.modal a {
+  color: white;
+}
+
+.modal .header {
+  width: 100%;
+}
+
+.modal li {
+  font-weight: 600;
+}
+
+.navlinks {
+  position: relative;
+  top: 0%;
+  left: 110%;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: right;
+  transition: 1s;
+  background-color: #0052fe;
+}
+
+.hamburgerMenuContainer {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.hamburger.open,
+.hamburger::before.open,
+.hamburger::after.open {
+  background-color: #fff;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--hamburguer-color);
+  z-index: 3000;
+  content: "";
+  transition: 0.15s;
+  border-radius: 3px;
+}
+
+.hamburger {
+  top: 45%;
+}
+
+.hamburger::before {
+  top: -200%;
+}
+
+.hamburger::after {
+  top: 200%;
+}
+
+.hamburger.animate {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.hamburger.animate::before {
+  transform: rotate(-45deg);
+  transform-origin: 29px;
+}
+
+.hamburger.animate::after {
+  transform: rotate(45deg);
+  transform-origin: 29px;
+}
+
+.animate {
+  background-color: white;
+}
+
+@media (min-width: 900px) {
+  header .hamburgerMenuContainer {
+    display: none;
+  }
+  header .right {
+    display: flex;
+  }
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.img {
+  width: 100%;
+  min-width: 300px;
+  max-width: 737px;
+}
+
+.img.phone {
+  min-width: 472px;
+  max-width: 768px;
+}
+
+.responsive-grid {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 0 40px;
+}
+
+.responsive-grid h1 {
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: 600;
+  color: #0052fe;
+}
+
+.responsive-grid p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (min-width: 900px) {
+  .responsive-grid {
+    flex-direction: row;
+    margin: 150px auto;
+  }
+  .responsive-grid img {
+    margin-left: 80px;
+  }
+  .responsive-grid.reverse {
+    flex-direction: row-reverse;
+  }
+  .reverse img {
+    margin-right: 80px;
+    margin-left: 0px;
+  }
+}
+
+.telegram-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 30px;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  background-color: #0052fe;
+  cursor: pointer;
+}
+.telegram-button.inverted {
+  color: #0052fe;
+  background-color: white;
+}
+
+.telegram-button img {
+  margin-left: 10px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.cards-grid {
+}
+
+@media (min-width: 900px) {
+  .cards-grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+  }
+}
+.card {
+  padding: 16px;
+  border-radius: 16px;
+  background-color: #e0eaff;
+  margin-bottom: 32px;
+}
+
+.card h4 {
+  font-size: 28px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #0052fe;
+}
+
+.card span {
+  font-size: 16px;
+  line-height: 20px;
+  color: black;
+}
+
+.jobs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 350px auto;
+  text-align: center;
+  padding: 0 40px;
+  max-width: 744px;
+}
+
+.jobs h1 {
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: 600;
+  color: #0052fe;
+}
+
+.jobs p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.who-we-are {
+  display: grid;
+  grid-gap: 70px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+  padding: 50px;
+}
+
+.who {
+  background-color: #e0eaff;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 330px;
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.who img {
+  width: 100%;
+}
+
+.selected:before {
+  content: "";
+  width: 133px;
+  height: 133px;
+  background-image: url("src/polygon.svg");
+  position: absolute;
+  z-index: -1;
+  right: -60px;
+  bottom: 30px;
+}
+
+.selected2:before {
+  content: "";
+  width: 133px;
+  height: 133px;
+  background-image: url("src/polygon.svg");
+  position: absolute;
+  z-index: -1;
+  left: -30px;
+  bottom: 30px;
+}
+
+.who span {
+  padding: 32px 0;
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.blue {
+  color: #0052fe;
+  margin: 70px 0;
+  text-align: center;
+}
+
+.footer {
+  background-color: #001033;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 10px 30px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer ul,
+.modal ul {
+  padding: 0;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.footer.logo {
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer li,
+.modal li {
+  margin: 10px 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer li img,
+.modal li img {
+  margin-left: 10px;
+}
+
+@media (min-width: 900px) {
+  .flex,
+  .right,
+  .footer ul,
+  .right ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .right li {
+    margin: 0 20px 0 0;
+  }
+}
