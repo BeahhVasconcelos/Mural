@@ -1,4 +1,4 @@
-import "./styles.css";
+
 
 const hamburger = document.querySelector(".hamburger");
 const hamburgerContainer = document.querySelector(".hamburgerMenuContainer");
